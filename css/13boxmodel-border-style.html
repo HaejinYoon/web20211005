@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>border style</title>
+    <style>
+        div {
+            height: 100px;
+            width: 200px;
+        }
+        #div1 {
+            border-style: solid;
+        }
+        #div2{
+            border-style: dotted;
+        }
+        #div3{
+            border-style: double;
+        }
+        #div4{
+            border-style: solid dotted double groove;
+            /*위 오른쪽 아래 왼쪽 순으로 적용*/
+        }
+        #div5 {
+            border-style: solid;
+        }
+        #div6{
+            border-style: solid dotted;
+        }
+        #div7{
+            border-style: dotted;
+        }
+        #div8 {
+            border-top-style: solid;
+            border-right-style: double;
+            border-bottom-style: dotted;
+            border-left-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">Lorem, ipsum dolor.</div>
+    <div id="div2">Nobis, accusantium iusto!</div>
+    <div id="div3">Numquam, facilis provident!</div>
+
+    <div id="div4">Lorem, ipsum dolor.</div>
+
+    <!-- div#div$@5*3>lorem3 -->
+    <div id="div5">Lorem, ipsum dolor.</div>
+    <div id="div6">Sapiente, velit beatae?</div>
+    <div id="div7">Quo, iste perferendis.</div>
+
+    <div id="div8">Lorem, ipsum dolor.</div>
+</body>
+</html>
