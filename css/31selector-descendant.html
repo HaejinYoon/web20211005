@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>descendant selector</title>
+    <style>
+        div p{/*p 요소중 div를 조상으로 두고있는 것들. div의 자손인 p들*/
+            color: blue;
+        }    
+        body p{
+            text-decoration: underline;
+        }
+        body>p{
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div*2>p>lorem^^p*2>lorem -->
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut est dicta odit optio repudiandae exercitationem voluptatum unde, eum, fugiat dolorum ab aut aliquid, harum beatae ipsa ipsam ex delectus. Officia!</p>
+    </div>
+    <div>
+        <p>Vel nobis numquam iusto perspiciatis minus aut cum, eius itaque earum dolor? Tempora, sapiente! Expedita maxime porro corrupti soluta odit, neque commodi explicabo odio quia fugiat aperiam, quo, similique quisquam?</p>
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus ratione ab doloribus minus earum, ea quas unde, repudiandae eaque facilis provident atque id impedit ipsum aperiam voluptates accusamus molestias esse.</p>
+    <p>Aliquid laborum qui dolor voluptatum dignissimos mollitia rem magni natus quis voluptatem exercitationem, facere tempora necessitatibus nemo illo, dolorum, ex est veniam! Nostrum cum et expedita reprehenderit deserunt praesentium itaque.</p>
+</body>
+</html>
