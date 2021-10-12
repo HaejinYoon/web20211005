@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <title>flex box</title>
+    <style>
+        .menu-container{
+            display: flex;
+            justify-content: space-between;
+            background-color: #222;
+            color: white;
+        }
+        .left-menu, .right-menu{
+            display: flex;
+        }
+        .menu-item{
+            padding: 5px 10px;
+        }
+        .menu-item:hover{
+            background-color: seagreen;
+        }
+        .top-menu{
+            display: flex;
+        }
+        .top-menu-item{
+            padding: 5px 10px;
+            font-size: 32px;
+        }
+        .top-container{
+            display: flex;
+            height: 42px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 7px;
+        }
+        .button{
+            padding: 3px 10px;
+            color: white;
+            background-color: seagreen;
+            border-radius: 10px;
+        }
+        .top-container>.left-menu>div{
+            margin-right: 5px;
+        }
+        .logo{
+            font-size: 40px;
+            color: red;
+        }
+        .top-container> .left-menu{
+            align-items: center;
+        }
+        .main{
+            display: flex;
+            padding: 5px;
+            justify-content: space-between;
+        }
+        .main>.side-menu{
+            background-color: gray;
+            width: 200px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+        .main>.main-content{
+            background-color: brown;
+            width: 70%;
+            flex: 1;
+            margin: 0px 5px;
+            padding: 10px;
+        }
+        .main>.ads{
+            background-color: aqua;
+            width: 200px;
+        }
+        .side-menu-item:hover{
+            color: white;
+            background-color: seagreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- .top-container>.left-menu+.right-menu -->
+    <div class="top-container">
+        <div class="left-menu">
+            <!-- div{image}+div{Menu} -->
+            <div class="logo"><i class="fas fa-school"></i></div>
+            <div>Menu<i class="fas fa-caret-down"></i></div>
+        </div>
+        <div class="right-menu">
+            <div class="button">Log in</div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="top-menu">
+        <div class="top-menu-item"><i class="fas fa-school"></i></div>
+        <div class="top-menu-item">Menu</div>
+        <div class="top-menu-item" style="align-items: flex-end;">Log in</div>
+        
+    </div> -->
+    <div class="menu-container">
+    <!-- .left-menu>.menu-item*5 -->
+        <div class="left-menu">
+            <div class="menu-item"><i class="fas fa-bars"></i></div>
+            <div class="menu-item"><i class="fas fa-home"></i></div>
+            <div class="menu-item">HTML</div>
+            <div class="menu-item">CSS</div>
+            <div class="menu-item">JAVSCRIPT</div>
+        </div>
+
+        <!-- .right-menu>.menu-item*3 -->
+        <div class="right-menu">
+            <div class="menu-item"><i class="fas fa-adjust"></i></div>
+            <div class="menu-item"><i class="fas fa-globe-americas"></i></div>
+            <div class="menu-item"><i class="fas fa-search"></i></div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="side-menu"> 
+            <div class="side-menu-item">Lorem.</div>
+            <div class="side-menu-item">Asperiores!</div>
+            <div class="side-menu-item">Necessitatibus?</div>
+            <div class="side-menu-item">Debitis?</div>
+            <div class="side-menu-item">Voluptate?</div>
+            <div class="side-menu-item">Labore.</div>
+            <div class="side-menu-item">Ex!</div>
+            <div class="side-menu-item">Quo!</div>
+            <div class="side-menu-item">Quibusdam!</div>
+            <div class="side-menu-item">Incidunt!</div>
+            <div class="side-menu-item">Numquam.</div>
+            <div class="side-menu-item">Natus!</div>
+            <div class="side-menu-item">Quisquam?</div>
+            <div class="side-menu-item">Recusandae!</div>
+            <div class="side-menu-item">Harum.</div>
+            <div class="side-menu-item">Unde.</div>
+            <div class="side-menu-item">Exercitationem.</div>
+            <div class="side-menu-item">Nulla.</div>
+            <div class="side-menu-item">Qui.</div>
+            <div class="side-menu-item">Perferendis!</div>
+        </div>
+        <div class="main-content">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem excepturi nobis inventore possimus aperiam ipsa vel nisi magnam nulla, iusto minima porro. Ab, perspiciatis! Voluptates, sed maiores. Sint, aliquid! Dolor!</p>
+            <h1>Lorem, ipsum dolor.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias a, repellendus quisquam quasi ipsam non quae corporis mollitia soluta aliquid. Nobis distinctio at obcaecati rerum quos quibusdam consequuntur illum quod.</p>
+            <h1>Placeat, iusto ipsa.</h1>
+            <p>Reiciendis quaerat, repellendus pariatur, nulla porro necessitatibus labore cupiditate suscipit quia error velit expedita reprehenderit numquam commodi mollitia? Corrupti laborum excepturi est provident culpa dolore nostrum tenetur voluptatibus doloremque enim.</p>
+            <h1>Totam, magnam similique!</h1>
+            <p>Quos, esse autem. Praesentium totam tempore quibusdam porro, quidem dolores blanditiis dicta provident sed veritatis ratione. Exercitationem rerum error quod nemo atque at cum laborum harum odit, sed magni. Aspernatur!</p>
+            <h1>Animi, nisi et.</h1>
+            <p>Soluta inventore praesentium commodi aperiam porro nesciunt eius similique perspiciatis illo cum aliquam debitis, doloribus odio reprehenderit voluptas consequatur quae natus consectetur iusto recusandae. Sequi velit ut delectus possimus sit!</p>
+            <h1>Porro, quasi illum.</h1>
+            <p>Dignissimos atque quod quaerat ullam voluptates dolore ut harum repellat aperiam totam assumenda at aliquid dicta, nobis iure inventore sed necessitatibus deleniti beatae error id? Neque in eaque libero omnis?</p>
+            <h1>Quidem, veritatis at.</h1>
+            <p>Esse libero eos eaque optio qui, similique possimus accusantium in sequi, blanditiis maxime amet mollitia eligendi tenetur exercitationem vero error nisi quae quas voluptas veritatis ut perferendis hic! Eaque, est!</p>
+            <h1>Asperiores, vitae optio.</h1>
+            <p>Aut esse ab ut neque eligendi assumenda veritatis recusandae repudiandae omnis fugiat officiis necessitatibus at, nesciunt labore asperiores sit, doloribus aliquam possimus nostrum. Eligendi odit quo dolorum aspernatur error magnam!</p>
+            <h1>Aliquam, adipisci explicabo.</h1>
+            <p>Asperiores laudantium doloremque voluptate perferendis, quisquam sequi quibusdam maiores beatae fuga repellat nesciunt, rem repudiandae possimus non commodi vero nam mollitia hic nulla unde delectus ex deleniti! Aliquid, quos! Doloribus!</p>
+            <h1>Laborum, nesciunt? Ipsa?</h1>
+            <p>Explicabo labore et perspiciatis enim consequuntur qui doloribus at atque ipsa rem rerum corrupti, eveniet deleniti consequatur hic assumenda quo similique iste nostrum soluta dolores veniam facilis quaerat fugiat? Facilis!</p>
+        </div>
+        <div class="ads">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed quisquam ut impedit, ad porro aut doloribus inventore cum fugit. Nulla perspiciatis autem aliquam minima laborum consequatur corporis alias hic soluta?</div>
+    </div>
+</body>
+</html>
