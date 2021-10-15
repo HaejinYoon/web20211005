@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <title>classList 2</title>
+    <style>
+        .dark {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addDarkClass();">DARK</button>
+    <button onclick="removeDarkClass();">LIGHT</button>
+    <!-- div>h1>lorem1^p>lorem -->
+    <div>
+        <h1>
+            Lorem.
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae doloremque quod placeat voluptatum maxime repudiandae? Atque minima dignissimos rem quod maxime aliquam eveniet ratione quibusdam provident optio est, ab in.
+        </p>
+    </div>
+<script>
+    function addDarkClass() {
+        document.querySelector("div").classList.add("dark");
+    }
+
+    function removeDarkClass() {
+        document.querySelector("div").classList.remove("dark");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <title>value property 3</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- input#input1+p*5>lorem1 -->
+    <input type="text" id="input1">
+    <p id="0" onclick="changeVal(0);">
+        Lorem.
+    </p>
+    <p id="1" onclick="changeVal(1);">
+        Exercitationem.
+    </p>
+    <p id="2" onclick="changeVal(2);">
+        Delectus!
+    </p>
+    <p id="3" onclick="changeVal(3);">
+        Asperiores.
+    </p>
+    <p id="4" onclick="changeVal(4);">
+        Beatae!
+    </p>
+<script>
+    function changeVal(idx) {
+        // let val = document.getElementById(a).value;
+        // console.log(val);
+        // let inp = document.querySelector("#input1");
+        // console.log(inp);
+        // inp.innerHTML=val;
+        let paras = document.querySelectorAll("p");
+        
+        // let val = document.getElementsById("#paras[idx].in");
+        let val=paras[idx].innerHTML;
+        // console.log(val);
+        document.querySelector("#input1").value = val.trim();
+        
+
+
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <title>DOM get element</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="input1">
+    <!-- button{변경}+p#result{hello javascript} -->
+    <button onclick="change();">변경</button>
+    <p id="result">hello javascript</p>
+
+<script>
+    function change() {
+        //id가 result 요소의 content를 "헬로 자바스크립트"로 변경
+        let s = document.querySelector("#input1").value;
+        let r = document.getElementById("result");
+        console.log(s);
+        r.innerHTML=s;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <title>DOM get element</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- p.note#para$*3>lorem1 -->
+    <p class="note" id="para1">Lorem.</p>
+    <p class="note" id="para2">Fugiat.</p>
+    <p class="note" id="para3">Officia?</p>
+
+<script>
+    // console 모든 p요소의 content가 출력
+
+    let notes = document.getElementsByClassName("note");
+    console.log(notes[0].innerHTML);
+    console.log(notes[1].innerHTML);
+    console.log(notes[2].innerHTML);
+
+    console.log("for문으로 출력");
+    for(let i=0;i<notes.length;i++){
+        console.log(notes[i].innerHTML);
+    }
+    // 모든 p요소의 content를 "hello"로 변경
+    // notes[0].innerHTML="hello";
+    // notes[1].innerHTML="hello";
+    // notes[2].innerHTML="hello";
+
+    for(let i=0;i<notes.length;i++){
+        notes[i].innerHTML="hello";
+    }
+</script>
+</body>
+</html>
