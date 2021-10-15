@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <title>branch-rps 2</title>
+    <style>
+        .fas{
+            font-size: 42px;
+        }
+        #para1{
+            font-size: 30px;
+            color: red;
+        }
+        button{
+            font-size: 30px;
+            border-radius: 10px;
+        }
+        div{
+            border: 5px solid green;
+        }
+    </style>
+</head>
+<body>
+    <!-- button{가위 바위 보} -->
+    <!-- <button onclick="rps();">가위 바위 보</button> -->
+    <div>
+        
+        <!-- button[onclick]*3 -->
+        <button onclick="rps(0);">가위</button>
+        <button onclick="rps(1);">바위</button>
+        <button onclick="rps(2);">보</button>
+    </div>
+        
+    <!-- div>span>i.fas -->
+    <div>
+        <span style="font-size: 42px;">
+            사용자 : <e class="fas"></e><br>
+            컴퓨터 : <i class="fas"></i>
+        </span>
+    </div>
+
+    <div>
+        <h1>
+            과연 경기 결과는?
+        </h1>
+        <p id="para1"></p>
+    </div>
+<script>
+    function rps(user) {
+        let uicon = document.querySelector("e")
+        uicon.classList.remove("fa-hand-rock", "fa-hand-paper", "fa-hand-scissors")
+        if(user==0){
+            // console.log("가위");
+            uicon.classList.add("fa-hand-scissors")
+        } else if(user==1){
+            // console.log("바위");
+            uicon.classList.add("fa-hand-rock")
+        } else if(user==2){
+            // console.log("보");
+            uicon.classList.add("fa-hand-paper")
+        }  
+        let r = Math.random();
+        //console.log(r);
+        r= parseInt(r*3);
+        // console.log(r);
+
+    
+        let icon = document.querySelector("i");
+        icon.classList.remove("fa-hand-rock", "fa-hand-paper", "fa-hand-scissors")
+        if(r==0){
+            // console.log("가위");
+            icon.classList.add("fa-hand-scissors")
+        } else if(r==1){
+            // console.log("바위");
+            icon.classList.add("fa-hand-rock")
+        } else if(r==2){
+            // console.log("보");
+            icon.classList.add("fa-hand-paper")
+        }  
+
+        let result = document.getElementById("para1");
+        
+        if(r==user){
+            result.innerHTML="무승부;;";
+        }else if(user==0 && r==1){
+            result.innerHTML="괜찮아 그럴수도 있지ㅠㅠ";
+        }else if(user==0 && r==2){
+            result.innerHTML="WINNER WINNER CHICKEN DINNER!!";
+        }else if(user==1 && r==0){
+            result.innerHTML="WINNER WINNER CHICKEN DINNER!!";
+        }else if(user==1 && r==2){
+            result.innerHTML="괜찮아 그럴수도 있지ㅠㅠ";
+        }else if(user==2 && r==0){
+            result.innerHTML="괜찮아 그럴수도 있지ㅠㅠ";
+        }else if(user==2 && r==1){
+            result.innerHTML="WINNER WINNER CHICKEN DINNER!!";
+        }
+
+    }
+    
+</script>
+</body>
+</html>
