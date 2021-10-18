@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <title>guess number</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- input+button -->
+    <input type="text" onkeyup="if(window.event.keyCode==13){guess()}">
+    <button onclick="guess();">확인</button>
+
+    <!-- h1#result -->
+    <h1 id="result">Result</h1>
+<script>
+    let randomNumber = parseInt(Math.random()*100)+1;
+    console.log(randomNumber);
+
+
+    function guess() {
+        let userInputNumber=Number(document.querySelector("input").value);
+
+        console.log("user", userInputNumber);
+        console.log("comp", randomNumber);
+
+        if(userInputNumber==randomNumber){
+            let result = document.getElementById("result");
+            result.innerHTML="Correct! 정답은 "+randomNumber+"입니다.";
+        } else if(userInputNumber>randomNumber){
+            result.innerHTML="더 작은 수를 입력해주세요!";
+        } else if(userInputNumber<randomNumber){
+            result.innerHTML="더 큰 수를 입력해주세요!";
+        }
+    }
+</script>
+</body>
+</html>
