@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <title>addEventListener</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="input1">
+    <h1 id="head1"></h1>
+<script>
+    //#input1에 keyup 이벤트 발생시 value가 console에 출력
+    //addEventListner 메소드 활용
+
+    document.addEventListener("keyup", function () {
+        let input=document.querySelector("#input1").value;
+        console.log(input);
+    });
+
+    document.querySelector("#input1").addEventListener("keyup", function () {
+        document.querySelector("#head1").innerHTML = 
+            document.querySelector("#input1").value;
+    })
+</script>
+</body>
+</html>
