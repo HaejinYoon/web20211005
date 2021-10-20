@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <title>template literal</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- {name}+input#input1+{color}+input#input2+button{+} -->
+    name
+    <input type="text" id="input1"><br>
+    color
+    <input type="text" id="input2">
+    <button onclick="merge();del();">+</button>
+
+    <!-- ul#list1 -->
+    <ul id="list1">
+        <li style="color:blue">Lorem.</li>
+    </ul>
+<script>
+    function merge() {
+        let str = document.querySelector("#input1").value;
+        let color = document.querySelector("#input2").value;
+        console.log(str, color);
+        document.querySelector("#list1").innerHTML +=`<li style="color:${color}">${str}</li>`;
+    }
+    function del() {
+        document.querySelector("#input1").value="";
+        document.querySelector("#input2").value="";
+    }
+</script>
+</body>
+</html>
