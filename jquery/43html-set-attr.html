@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../icon/css/all.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <title>set attr</title>
+    <style>
+        
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("input").focus(function () {
+                $(this).val("https://");
+            });
+            $("input").keyup(function () {
+                
+                let link = $(this).val();
+                $("a").attr("href", link);
+                
+                if(link=="https://www.naver.com"){
+                    $("a").text("NAVER");
+                }
+
+                if(link=="https://www.google.com"){
+                    $("a").text("GOOGLE");
+                }
+                
+                if(link=="https://www.daum.net"){
+                    $("a").text("DAUM");
+                }
+            })
+        });
+    </script>
+</head>
+<!-- input+br+a -->
+<input type="text">
+<br>
+<a href="">link</a>
+    
+<body>
+<script>
+    
+</script>
+</body>
+</html>
